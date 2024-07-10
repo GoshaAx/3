@@ -1,0 +1,44 @@
+@startuml
+
+class Student {
+    - int id
+    - String nume
+    - String prenume
+    - String patronimic
+    - String dataNasterii
+    - String adresa
+    - String telefon
+    - String specialitate
+    - int an
+    - String grupa
+    + void setId(int id)
+    + void setNume(String nume)
+    + void setPrenume(String prenume)
+    + void setPatronimic(String patronimic)
+    + void setDataNasterii(String dataNasterii)
+    + void setAdresa(String adresa)
+    + void setTelefon(String telefon)
+    + void setSpecialitate(String specialitate)
+    + void setAn(int an)
+    + void setGrupa(String grupa)
+    + String toString()
+}
+
+class Studiu_NR1 {
+    - Student[] studenti
+    - final String FILENAME
+    - int cnt
+    + incarcaEleviDinFisier()
+    + adaugaStudent(Scanner in)
+    + AfisareStudenti()
+    + AfisareDupaNume(Student[] studenti)
+    + AfisareDupaSpecialitate(Scanner in)
+    + AfisarePentruFiecareCurs()
+    + AfisareDupaGrupa()
+    + salveazaStudentiInFisier()
+    + main(String[] args)
+}
+
+Student -- Studiu_NR1
+
+@enduml
